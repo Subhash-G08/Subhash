@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to my portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#0d0d0d;color:#fff;font-family:'Segoe UI',sans-serif;scroll-behavior:smooth;}
+header nav{display:flex;justify-content:space-between;align-items:center;padding:15px 50px;background:rgba(0,0,0,0.6);border-bottom:2px solid #0ff;position:fixed;width:100%;top:0;z-index:100;}
+.logo{color:#0ff;font-size:1.5em;font-weight:bold;}
+.logo span{color:#f0f;}
+nav ul{display:flex;list-style:none;}
+nav ul li{margin:0 10px;}
+nav ul li a{color:#ccc;text-decoration:none;transition:0.3s;}
+nav ul li a:hover,nav ul li a.active{color:#0ff;}
+.btn{padding:10px 20px;background:#0ff;color:#000;border-radius:5px;text-decoration:none;font-weight:bold;transition:0.3s;}
+.btn:hover{background:#f0f;color:#fff;}
+section{min-height:100vh;padding:100px 50px;display:flex;flex-direction:column;justify-content:center;}
+h2{font-size:2.5em;margin-bottom:20px;color:#0ff;}
+p{margin-bottom:15px;line-height:1.6;}
+.glow{color:#0ff;text-shadow:0 0 10px #0ff,0 0 20px #0ff;}
+#clock{margin-top:20px;font-size:1.2em;color:#f0f;}
+.project-card{background:rgba(255,255,255,0.05);padding:20px;border-radius:10px;margin-bottom:20px;box-shadow:0 0 10px rgba(0,255,255,0.2);}
+.skill-badge{display:inline-block;padding:8px 15px;margin:5px;background:#0ff;color:#000;border-radius:20px;font-weight:bold;}
+form input,form textarea{width:100%;padding:10px;margin:10px 0;border:none;border-radius:5px;}
+form button{padding:10px 20px;background:#0ff;color:#000;border:none;border-radius:5px;font-weight:bold;}
+form button:hover{background:#f0f;color:#fff;cursor:pointer;}
+footer{text-align:center;padding:20px;background:rgba(0,0,0,0.6);}
+.light-theme{background:#f5f5f5;color:#000;}
+.light-theme nav{background:#fff;border-bottom:2px solid #000;}
+.light-theme .logo{color:#000;}
+.light-theme .glow{text-shadow:none;color:#000;}
+</style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1 class="logo">Subhash<span>G</span></h1>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#internships">Internships</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="themeToggle">🌙</button>
+    </nav>
+</header>
+
+<section id="home">
+    <h2>Hi, I'm <span class="glow">Subhash G</span></h2>
+    <p>Innovative Engineer | Full Stack Developer | Future DevOps Architect</p>
+    <p>Driven to design intelligent, automated solutions that shape the future of technology.</p>
+    <a href="#projects" class="btn">Explore My Work</a>
+    <div id="clock"></div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a 2025 BE graduate in Information Science and Engineering from The Oxford College of Engineering, Bengaluru. With a passion for creating impactful, real-world solutions, I thrive at the intersection of software innovation and future-ready infrastructure.</p>
+    <p>I believe in <strong>"Engineering for Tomorrow"</strong> — developing systems that scale, adapt, and inspire.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+        <h3>E-Commerce Website</h3>
+        <p><strong>Tech:</strong> HTML, CSS, Java</p>
+        <p>Designed and developed a dynamic, secure online shopping platform with seamless backend integration.</p>
+    </div>
+    <div class="project-card">
+        <h3>Hostel Management System</h3>
+        <p><strong>Tech:</strong> HTML, CSS, JavaScript, MySQL</p>
+        <p>Built a fully responsive hostel management solution with real-time data operations.</p>
+    </div>
+</section>
+
+<section id="internships">
+    <h2>Internships</h2>
+    <p><strong>Prinston Smart Engineers</strong> (May 17, 2023 – July 3, 2023)</p>
+    <p>Developed and optimized responsive web solutions, enhancing UI/UX and performance.</p>
+    <p><strong>JSpiders</strong> (April 21, 2025)</p>
+    <p>Completed a comprehensive Java Full Stack internship — mastering Core Java, JDBC, HTML, CSS, JavaScript, and SQL.</p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <span class="skill-badge">Core Java</span>
+    <span class="skill-badge">C#</span>
+    <span class="skill-badge">HTML</span>
+    <span class="skill-badge">CSS</span>
+    <span class="skill-badge">JavaScript</span>
+    <span class="skill-badge">SQL</span>
+    <span class="skill-badge">Node.js</span>
+    <span class="skill-badge">JDBC</span>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+        <input type="text" name="from_name" placeholder="Your Name" required>
+        <input type="email" name="reply_to" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <p>Email: <a href="mailto:subhashgise2025@gmail.com">subhashgise2025@gmail.com</a></p>
+    <p>Phone: +91 8123050713</p>
+</section>
+
+<footer>
+    <p>© 2025 Subhash G | Engineered for Tomorrow</p>
+</footer>
+
+<!-- EmailJS for email sending -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+// Clock
+function updateClock(){
+    let now=new Date();
+    let time=now.toLocaleTimeString();
+    document.getElementById("clock").innerText=time;
+}
+setInterval(updateClock,1000);
+updateClock();
+
+// Theme toggle
+document.getElementById("themeToggle").addEventListener("click",()=>{
+    document.body.classList.toggle("light-theme");
+});
+
+// ✅ EmailJS Setup
+(function(){
+    emailjs.init("_oHlHSgAGOmF1gXwl"); // Replace with your EmailJS Public Key
+})();
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_ezxx0k3", "template_ux5srkj", this)
+        .then(function() {
+            alert('✅ Email Sent Successfully!');
+            document.getElementById('contact-form').reset();
+        }, function(error) {
+            alert('❌ Email Failed: ' + JSON.stringify(error));
+        });
+});
+</script>
+
+</body>
+</html>
